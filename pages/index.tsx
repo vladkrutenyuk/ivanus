@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styled from "styled-components"
+import AgeTimer from "../components/AgeTimer"
 import Ivan3D from "../components/Ivan3D/Ivan3D"
 
 export default function HomePage() {
@@ -13,10 +14,10 @@ export default function HomePage() {
 				</CelebrateLent>
 				<Image src='/images/happy-birthday-circle.png' width={167} height={167} alt='ваня юницкий миллионы денег с днем рождения' />
 			</CelebrateLentGroup>
+			<AgeTimer></AgeTimer>
 		</>
 	)
 }
-
 
 const CelebrateLentGroup = styled.div`
 	display: flex;

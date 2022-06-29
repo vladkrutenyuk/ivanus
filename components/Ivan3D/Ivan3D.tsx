@@ -106,7 +106,7 @@ const onScroll = () => {
 
 const animate = () => {
     animationFrameId = requestAnimationFrame( animate );
-    mixer.update(clock.getDelta())
+    mixer?.update(clock.getDelta())
     updateRender()
 }
 
