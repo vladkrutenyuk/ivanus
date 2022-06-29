@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import styled from 'styled-components'
 import Image from '../node_modules/next/image'
 import LinkA from './LinkA'
@@ -30,12 +31,13 @@ const navBarItems: NavBarItem[] = [
     },
 ]
 
-const MainLayout = ({ children }: { children: JSX.Element}) => {
+const MainLayout = ({ children, items = navBarItems }: 
+    { children: JSX.Element, items?: NavBarItem[] }) => {
     return (
         <>
             <FlexColumnCenter>
                 <BackgroundContainer>
-                    <Image src={'/images/cosmos.jpg'} layout='fill' objectFit='cover' alt='ваня юницкий космос' />
+                    <Image src='/images/cosmos.jpg' layout='fill' objectFit='cover' alt='ваня юницкий космос' />
                 </BackgroundContainer>
                 <SubHeader>ФАН-ВЕБСАЙТ</SubHeader>
                 <LinkA href='/'>
@@ -48,14 +50,24 @@ const MainLayout = ({ children }: { children: JSX.Element}) => {
                         </HeaderImageContainer>
                     </Header>
                 </LinkA>
-                <NavBar items={navBarItems}></NavBar>
+                <NavBar items={items}></NavBar>
                 {children}
             </FlexColumnCenter>
         </>
     )
 }
 
+
 export default MainLayout
+
+export const getStaticProps: GetStaticProps = async () => {
+
+    return {
+        props: {
+            items: navBarItems
+        }
+    }
+}
 
 const FlexColumnCenter = styled.div`
     display: flex;
