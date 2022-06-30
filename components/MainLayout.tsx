@@ -1,6 +1,4 @@
-import { GetStaticProps } from 'next'
 import styled from 'styled-components'
-import Image from '../node_modules/next/image'
 import LinkA from './LinkA'
 import NavBar, { NavBarItem } from './NavBar'
 
@@ -9,18 +7,12 @@ const MainLayout = ({ children, items }:
     return (
         <>
             <FlexColumnCenter>
-                <BackgroundContainer>
-                    <Image src='/images/cosmos.jpg' layout='fill' objectFit='cover' alt='ваня юницкий космос' />
-                </BackgroundContainer>
+                <BackgroundContainer src='/images/cosmos.jpg' alt='ваня юницкий космос' />
                 <SubHeader>ФАН-ВЕБСАЙТ</SubHeader>
                 <LinkA href='/'>
                     <Header>
-                        <SmileContainer>
-                            <Image src='/images/smile.png' width={44} height={44} alt='ваня улыбака смайл' />
-                        </SmileContainer>
-                        <HeaderImageContainer>
-                            <Image src='/images/vanya-rainbow.png' layout='fill' objectFit='contain' alt='ваня юницкий гей' />
-                        </HeaderImageContainer>
+                        <SmileContainer src='/images/smile.png' width={44} height={44} alt='ваня улыбака смайл' />
+                        <HeaderImage src='/images/vanya-rainbow.png' alt='ваня юницкий гей' />
                     </Header>
                 </LinkA>
                 <NavBar items={items}></NavBar>
@@ -38,13 +30,14 @@ const FlexColumnCenter = styled.div`
     align-items: center;
 `
 
-const BackgroundContainer = styled.div`
+const BackgroundContainer = styled.img`
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    object-fit: cover;
 `
 
 const SubHeader = styled.div`
@@ -64,13 +57,14 @@ const Header = styled.div`
     border: 6px ridge #535665;
 `
 
-const HeaderImageContainer = styled.div`
+const HeaderImage = styled.img`
     position: relative;
     width: 400px;
     height: 54px;
+    object-fit: contain;
 `
 
-const SmileContainer = styled.div`
+const SmileContainer = styled.img`
     position: absolute;
     top: -26px;
     left: calc(50% - 22px);

@@ -24,6 +24,7 @@ export const NormalizeStyles = createGlobalStyle`
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
         overflow-x: hidden;
+        background-color: black;
     }
 
     body {

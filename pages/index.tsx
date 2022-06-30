@@ -1,4 +1,3 @@
-import Image from "next/image"
 import styled from "styled-components"
 import AgeTimer from "../components/AgeTimer"
 import Ivan3D from "../components/Ivan3D"
@@ -8,11 +7,11 @@ export default function HomePage() {
 		<>
 			<Ivan3D />
 			<CelebrateLentGroup>
-				<Image src='/images/happy-birthday-circle.png' width={167} height={167} alt='ваня юницкий миллионы денег с днем рождения' />
+				<img src='/images/happy-birthday-circle.png' width={167} height={167} alt='ваня юницкий миллионы денег с днем рождения' />
 				<CelebrateLent>
 					Празднуем 30-летие Ивана Юницкого!
 				</CelebrateLent>
-				<Image src='/images/happy-birthday-circle.png' width={167} height={167} alt='ваня юницкий миллионы денег с днем рождения' />
+				<img src='/images/happy-birthday-circle.png' width={167} height={167} alt='ваня юницкий миллионы денег с днем рождения' />
 			</CelebrateLentGroup>
 			<AgeTimer></AgeTimer>
 		</>

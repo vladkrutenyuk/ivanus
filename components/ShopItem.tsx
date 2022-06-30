@@ -1,4 +1,3 @@
-import Image from "next/image"
 import styled from "styled-components"
 
 export type ShopItemData = {
@@ -10,7 +9,7 @@ export type ShopItemData = {
 const ShopItem = ({ data }: { data:ShopItemData }) => {
     return (
         <Item>
-            <Image src={data.imageUrl} width={400} height={400} alt='' />
+            <img src={data.imageUrl} width={400} height={400} alt='' />
             <Name>{data.name}</Name>
             <Price>{data.price} руб</Price>
             <BuyButton onClick={() => alert('Товар распродан.')} />

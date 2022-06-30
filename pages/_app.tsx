@@ -1,4 +1,3 @@
-import { GetStaticProps } from 'next'
 import { AppProps } from 'next/app'
 import MainLayout from '../components/MainLayout'
 import { NavBarItem } from '../components/NavBar'

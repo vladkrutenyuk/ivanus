@@ -1,11 +1,10 @@
-import Image from "next/image"
 import styled from "styled-components"
 
 const BustripPage = () => {
     return (
         <>
             <FireWall></FireWall>
-            <Image style={{marginTop: '-40px'}} src='/images/bustrip-disk.png' width={520} height={520} alt='автобусный тур в автобусе весело музыка альбом диск' />
+            <img style={{marginTop: '-40px'}} src='/images/bustrip-disk.png' width={520} height={520} alt='автобусный тур в автобусе весело музыка альбом диск' />
             <audio
                 style={{width: '512px', marginTop: '-40px', zIndex: 1}}
                 controls
