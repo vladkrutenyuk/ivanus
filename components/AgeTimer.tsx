@@ -68,7 +68,7 @@ const FlexRow = styled.div`
     font-size: px;
     font-family: 'Courier New', monospace;
     font-weight: 700;
-    background-color: black;
+    background-color: #101010;
     color: #00c90085;
 
 `

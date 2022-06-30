@@ -4,35 +4,8 @@ import Image from '../node_modules/next/image'
 import LinkA from './LinkA'
 import NavBar, { NavBarItem } from './NavBar'
 
-const navBarItems: NavBarItem[] = [
-    {
-        label: 'Биография',
-        href: '/biography'
-    },
-    {
-        label: 'Творчество',
-        href: '/creative'
-    },
-    {
-        label: 'Автобусный тур',
-        href: '/bustrip'
-    },
-    {
-        label: 'Галерея',
-        href: '/gallery'
-    },
-    {
-        label: 'Пресса',
-        href: '/press'
-    },
-    {
-        label: 'Сувениры',
-        href: '/souvenirs'
-    },
-]
-
-const MainLayout = ({ children, items = navBarItems }: 
-    { children: JSX.Element, items?: NavBarItem[] }) => {
+const MainLayout = ({ children, items }: 
+    { children: JSX.Element, items: NavBarItem[] }) => {
     return (
         <>
             <FlexColumnCenter>
@@ -57,17 +30,7 @@ const MainLayout = ({ children, items = navBarItems }:
     )
 }
 
-
 export default MainLayout
-
-export const getStaticProps: GetStaticProps = async () => {
-
-    return {
-        props: {
-            items: navBarItems
-        }
-    }
-}
 
 const FlexColumnCenter = styled.div`
     display: flex;

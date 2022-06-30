@@ -1,7 +1,7 @@
 import Image from "next/image"
 import styled from "styled-components"
 import AgeTimer from "../components/AgeTimer"
-import Ivan3D from "../components/Ivan3D/Ivan3D"
+import Ivan3D from "../components/Ivan3D"
 
 export default function HomePage() {
 	return (
