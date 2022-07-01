@@ -49,9 +49,17 @@ export const getStaticProps: GetStaticProps = () => {
 export default SouvenirsPage
 
 const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
+    max-width: 1000px;
     margin-top: 60px;
     margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+
+    @media (max-width: 850px) {
+        gap: 40px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 `

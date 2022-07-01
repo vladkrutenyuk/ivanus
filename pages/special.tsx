@@ -39,7 +39,7 @@ const SpecialPage = () => {
             {started ?
                 <>
                     <Black />
-                    <img style={{ height: '95vh' }} src="/videos/real-hasl.webp" />
+                    <WebpImg src="/videos/real-hasl.webp" />
                 </>
                 :
                 <>
@@ -60,6 +60,14 @@ const Black = styled.div`
     height: 100%;
     z-index: -1;
     background-color: black;
+`
+
+const WebpImg = styled.img`
+    height: 95vh;
+
+    @media (max-width: 500px) {
+        height: 75vh;
+    }
 `
 
 const StartBtn = styled.img`

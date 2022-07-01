@@ -9,7 +9,7 @@ export type ShopItemData = {
 const ShopItem = ({ data }: { data:ShopItemData }) => {
     return (
         <Item>
-            <img src={data.imageUrl} width={400} height={400} alt='' />
+            <Cover src={data.imageUrl} alt='' />
             <Name>{data.name}</Name>
             <Price>{data.price} руб</Price>
             <BuyButton onClick={() => alert('Товар распродан.')} />
@@ -30,14 +30,36 @@ const Item = styled.div`
     text-align: center;
     color: #FFFFFF;
     text-shadow: 0px 4px 2px #000000;
+
+    @media (max-width: 850px) {
+        max-width: 300px;
+    }
+`
+
+const Cover = styled.img`
+    width: 400px;
+    height: 400px;
+
+    @media (max-width: 850px) {
+        width: 300px;
+        height: 300px;
+    }
 `
 
 const Name = styled.span`
     font-size: 20px;
+
+    @media (max-width: 850px) {
+        font-size: 16px;
+    }
 `
 
 const Price = styled.span`
     font-size: 18px;
+
+    @media (max-width: 850px) {
+        font-size: 14px;
+    }
 `
 
 const BuyButton = styled.img`
@@ -45,5 +67,12 @@ const BuyButton = styled.img`
     height: 68px;
     border-radius: 31px;
     background: url('/images/buy-btn.jpg');
+    background-size: contain;
     cursor: pointer;
+
+    @media (max-width: 850px) {
+        width: calc(192px*0.7);
+        height: calc(68px*0.7);
+        border-radius: calc(31px*0.7);
+    }
 `

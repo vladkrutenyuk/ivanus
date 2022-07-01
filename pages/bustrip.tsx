@@ -4,14 +4,13 @@ const BustripPage = () => {
     return (
         <>
             <FireWall></FireWall>
-            <img style={{marginTop: '-40px'}} src='/images/bustrip-disk.png' width={520} height={520} alt='автобусный тур в автобусе весело музыка альбом диск' />
-            <audio
-                style={{width: '512px', marginTop: '-40px', zIndex: 1}}
+            <CDDiskImg src='/images/bustrip-disk.png' alt='автобусный тур в автобусе весело музыка альбом диск' />
+            <Audio
                 controls
                 src="/audio/autobus-tour-song.mp3">
                     Your browser does not support the
                     <code>audio</code> element.
-            </audio>s
+            </Audio>s
             <Words>
                 {words}
                 {words}
@@ -38,12 +37,36 @@ const FireWall = styled.div`
     pointer-events: none;
 `
 
+const CDDiskImg = styled.img`
+    margin-top: -30px;
+    width: 520px;
+
+    @media (max-width: 540px) {
+        width: 360px;
+        margin-top: -20px;
+    }
+`
+
+const Audio = styled.audio`
+    width: 512px;
+    margin-top: -40px;
+
+    @media (max-width: 540px) {
+        width: 90%;
+        margin-top: -30px;
+    }
+`
+
 const Words = styled.pre`
     color: white;
     font-size: 16px;
     font-family: monospace;
     margin-top: 50px;
     margin-bottom: 100px;
+
+    @media (max-width: 540px) {
+        margin-top: 30px;
+    }
 `
 
 const words = 
