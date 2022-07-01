@@ -7,11 +7,11 @@ const MainLayout = ({ children, items }:
     return (
         <>
             <FlexColumnCenter>
-                <BackgroundContainer src='/images/cosmos.jpg' alt='ваня юницкий космос' />
+                <BackgroundCosmos src='/images/cosmos.jpg' alt='ваня юницкий космос' />
                 <SubHeader>ФАН-ВЕБСАЙТ</SubHeader>
                 <LinkA href='/'>
                     <Header>
-                        <SmileContainer src='/images/smile.png' width={44} height={44} alt='ваня улыбака смайл' />
+                        <SmileImage src='/images/smile.png' alt='ваня улыбака смайл' />
                         <HeaderImage src='/images/vanya-rainbow.png' alt='ваня юницкий гей' />
                     </Header>
                 </LinkA>
@@ -28,9 +28,10 @@ const FlexColumnCenter = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
 `
 
-const BackgroundContainer = styled.img`
+const BackgroundCosmos = styled.img`
     position: fixed;
     top: 0;
     left: 0;
@@ -47,6 +48,11 @@ const SubHeader = styled.div`
     font-style: italic;
     font-weight: 700;
     font-size: 35px;
+
+    @media (max-width: 1000px) {
+        font-size: 23px;
+        margin-top: 8px;
+    }
 `
 
 const Header = styled.div`
@@ -55,6 +61,11 @@ const Header = styled.div`
     padding: 20px 32px;
     background-color: #414450;
     border: 6px ridge #535665;
+
+    @media (max-width: 1000px) {
+        padding: 10px 16px;
+        margin-top: 18px;
+    }
 `
 
 const HeaderImage = styled.img`
@@ -62,10 +73,24 @@ const HeaderImage = styled.img`
     width: 400px;
     height: 54px;
     object-fit: contain;
+
+    @media (max-width: 1000px) {
+        width: calc(400px*0.8);
+        height: calc(54px*0.8);
+    }
 `
 
-const SmileContainer = styled.img`
+const SmileImage = styled.img`
     position: absolute;
     top: -26px;
     left: calc(50% - 22px);
+    width: 44px;
+    height: 44px;
+
+    @media (max-width: 1000px) {
+        width: 30px;
+        height: 30px;
+        top: -20px;
+        left: calc(50% - 15px); 
+    }
 `

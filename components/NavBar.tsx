@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import { PHONE_DEVICE_TRESHOLD_PX } from "../styles/global-styles"
 import LinkA from "./LinkA"
 import OldButton from './OldButton'
 
@@ -19,7 +20,7 @@ const NavBar = ({ items }: { items: NavBarItem[] }) => {
     }, [router])
 
     return (
-        <nav>
+        <Nav>
             <List>
                 {items?.map(item =>
                     <li key={item.href}>
@@ -32,17 +33,28 @@ const NavBar = ({ items }: { items: NavBarItem[] }) => {
                         </ListItemWrap>
                     </li>)}
             </List>
-        </nav>
+        </Nav>
     )
 }
+
+const Nav = styled.nav`
+    
+`
 
 const List = styled.ul`
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     gap: 32px;
     padding: 24px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+        gap: 0px;
+        padding: 12px;
+    }
 `
 
 const ListItemWrap = styled.div`

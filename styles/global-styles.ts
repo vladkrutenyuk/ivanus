@@ -1,0 +1,1 @@
+export const PHONE_DEVICE_TRESHOLD_PX = `801px`

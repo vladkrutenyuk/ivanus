@@ -13,11 +13,20 @@ const GalleryPage = ({ images }: { images: string[] }) => {
 }
 
 const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    align-items: center;
     gap: 40px;
     margin-top: 60px;
     margin-bottom: 100px;
+
+    @media (max-width: 500px) {
+    gap: 6px;
+        margin-top: 8px;
+        margin-bottom: 60px;
+    }
 `
 
 export const getStaticProps: GetStaticProps = () => {

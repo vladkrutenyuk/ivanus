@@ -59,7 +59,7 @@ const Post = ({ data }: { data: PostData}) => {
 export default Post
 
 const Container = styled.div`
-    width: 700px;
+    max-width: 700px;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,10 @@ const Container = styled.div`
 
 const Title = styled.h1`
     margin: 0;
+
+    @media (max-width: 500px) {
+        font-size: 24px;
+    }
 `
 
 const Separator = styled.div`
@@ -84,6 +88,11 @@ const Text = styled.p`
     /* color: #001AFF; */
     font-family: sans-serif;
     margin-bottom: 16px;
+    
+    @media (max-width: 500px) {
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
 `
 
 
@@ -118,13 +127,17 @@ const FlexRowBetween = styled.div`
 
 const LikeButton = styled.button`
     align-self: flex-end;
+    padding: 2px;
+    background-color: white;
     color: #001AFF;
     font-size: 18px;
-    padding: 2px;
+    border: 2px rgba(0, 0, 0, 0) solid;
+    cursor: pointer;
 
     &.liked {
         background-color: #676a7f;
         border: 2px #001AFF solid;
+        color: white;
     }
 `
 

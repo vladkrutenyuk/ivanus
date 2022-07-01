@@ -58,4 +58,10 @@ const Feed = styled.div`
     font-size: 17px;
     background-color: #bec2c9;
     padding: 40px 60px;
+
+    @media (max-width: 830px) {
+        margin: 0;
+        padding: 12px;
+        gap: 24px;
+    }
 `

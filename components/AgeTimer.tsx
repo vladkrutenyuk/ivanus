@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const AgeTimer = () => {
     const [ivanAge, setIvanAge] = useState<Date>()
+    const [currentDate, setCurrentDate] = useState<Date>()
 
     useEffect(() => {
         let interval = setInterval(() => {
@@ -17,6 +18,7 @@ const AgeTimer = () => {
                 seconds: 0
             })
             setIvanAge(diff)
+            setCurrentDate(new Date())
         }, 1000)
         
         return () => {
@@ -26,30 +28,30 @@ const AgeTimer = () => {
 
     return (
         <>
-            {ivanAge &&
+            {currentDate &&
                 <FlexRow>
                     <div>
-                        <Digits>{ivanAge.getFullYear()}</Digits>
+                        <Digits>{30}</Digits>
                         y
                     </div>
                     <div>
-                        <Digits>{ivanAge.getMonth()}</Digits>
+                        <Digits>{`0`}</Digits>
                         m
                     </div>
                     <div>
-                        <Digits>{ivanAge.getDate()}</Digits>
+                        <Digits>{currentDate.getDate() - 1}</Digits>
                         d
                     </div>
                     <div>
-                        <Digits>{ivanAge.getHours()}</Digits>
+                        <Digits>{currentDate.getHours()}</Digits>
                         h
                     </div>
                     <div>
-                        <Digits>{ivanAge.getMinutes()}</Digits>
+                        <Digits>{currentDate.getMinutes()}</Digits>
                         min
                     </div>
                     <div>
-                        <Digits>{ivanAge.getSeconds()}</Digits>
+                        <Digits>{currentDate.getSeconds()}</Digits>
                         sec
                     </div>
                 </FlexRow>}
@@ -70,7 +72,7 @@ const FlexRow = styled.div`
     font-weight: 700;
     background-color: #101010;
     color: #00c90085;
-
+    margin-bottom: 60px;
 `
 
 const Digits = styled.span`
@@ -81,4 +83,3 @@ const Digits = styled.span`
     background-color: black;
     padding: 2px;
 `
-

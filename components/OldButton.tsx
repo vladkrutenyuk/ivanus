@@ -30,6 +30,18 @@ const Button = styled.div<{ fontSize: number }>`
         border-top: 4px #626268 solid;
         border-left: 4px #626268 solid;
     }
+
+    @media (max-width: 400px) {
+        font-size: 14px;
+    }
+
+    @media (max-height: 820px) {
+        font-size: 14px;
+    }
+
+    @media (max-height: 700px) {
+        font-size: 12px;
+    }
 `
 
 export default OldButton
