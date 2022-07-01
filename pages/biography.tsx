@@ -26,7 +26,7 @@ const BiographyPage = ({ talants }: { talants: TalantData[] }) => {
                     он посветил цифровым технологиям.
                     <br/>
                     Успел основать немало кампаний не только по стране, но и по всмеу миру.
-                    Паралллельно активно развивал свои творческий навык такие как поэзия, 
+                    Параллельно активно развивал свои творческие навыки такие как поэзия, 
                     пение, живопись и лепка из глины.
                     Также не мало важную часть его жизни играет рыбалка.
                 </BiographyText>
@@ -44,7 +44,7 @@ const BiographyPage = ({ talants }: { talants: TalantData[] }) => {
                 <source src="/videos/ivan-tricks.webm" type="video/webm"/>
                 Your browser does not support the video tag.
             </video>
-            
+
         </>
     )
 }

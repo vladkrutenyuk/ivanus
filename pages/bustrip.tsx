@@ -8,10 +8,10 @@ const BustripPage = () => {
             <audio
                 style={{width: '512px', marginTop: '-40px', zIndex: 1}}
                 controls
-                src="/audio/cc0-audio/bustrip.mp3">
+                src="/audio/autobus-tour-song.mp3">
                     Your browser does not support the
                     <code>audio</code> element.
-            </audio>
+            </audio>s
             <Words>
                 {words}
                 {words}
