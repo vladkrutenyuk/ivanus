@@ -14,7 +14,7 @@ const TalantItem = ({ data }: { data: TalantData }) => {
                 <Text>{data.text}</Text>
             </TextGroupFlexItem>
             <ImageFlexItem>
-                <img src={data.imageUrl} alt={data.title}/>
+                <Img src={data.imageUrl} alt={data.title}/>
             </ImageFlexItem>
         </Container>
     )
@@ -25,7 +25,13 @@ export default TalantItem
 const Container = styled.div`
     display: flex;
     max-width: 824px;
-    gap: 60px;
+    gap: 40px;
+    padding: 0 16px;
+
+    @media (max-width: 800px) {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 `
 
 const TextGroupFlexItem = styled.div`
@@ -40,6 +46,10 @@ const Title = styled.h2`
     font-size: 47px;
     color: white;
     text-shadow: 0px 4px 2px #000000;
+
+    @media (max-width: 600px) {
+        font-size: 35px;
+    }
 `
 
 const Text = styled.p`
@@ -52,9 +62,24 @@ const Text = styled.p`
     color: #FFFFFF;
 
     text-shadow: 0px 4px 2px #000000;
+
+
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
 `
 
 const ImageFlexItem = styled.div`
     flex-grow: 1;
-    flex-shrink: 0;
+
+    @media (max-width: 600px) {
+        flex-shrink: 1;
+    }
+`
+
+const Img = styled.img`
+    @media (max-width: 600px) {
+        flex-shrink: 1;
+        width: 100%;
+    }
 `

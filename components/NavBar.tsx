@@ -38,7 +38,7 @@ const NavBar = ({ items }: { items: NavBarItem[] }) => {
 }
 
 const Nav = styled.nav`
-    
+    z-index: 1;
 `
 
 const List = styled.ul`

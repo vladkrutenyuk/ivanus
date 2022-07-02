@@ -25,12 +25,17 @@ export const NormalizeStyles = createGlobalStyle`
         -webkit-text-size-adjust: 100%;
         overflow-x: hidden;
         background-color: black;
+        background-image: url('/images/cosmos.jpg');
     }
 
     body {
         margin: 0;
         width: 100%;
+        min-height: 100vh;
         overflow-x: hidden;
+        background: url('/images/cosmos.jpg');
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     main {

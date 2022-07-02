@@ -7,8 +7,8 @@ const BiographyPage = ({ talants }: { talants: TalantData[] }) => {
     return (
         <>
             <IvanCar>
-                <BoomImage src='/images/boom.jpg' width={757} height={539} alt='иван воин оружия стрельба тачки форсаж'></BoomImage>
-                <IvanImage src='/images/danger.png' width={464} height={549} alt='иван воин оружия стрельба тачки форсаж'></IvanImage>
+                <BoomImage src='/images/boom.jpg' width={757} height={539} alt='иван воин оружия стрельба тачки форсаж' />
+                <IvanImage src='/images/danger.png' width={464} height={549} alt='иван воин оружия стрельба тачки форсаж' />
             </IvanCar>
             <Biography>
                 <BiographyTitle>ИВАН ЮНИЦКИЙ</BiographyTitle>
@@ -40,7 +40,7 @@ const BiographyPage = ({ talants }: { talants: TalantData[] }) => {
             </Talants>
             <Title>Художник.</Title>
             <Text>«Интеллектуал обьясняет простые вещи сложным языком. Художник обьясняет сложные простым» - Иван Юницкий</Text>
-            <video style={{marginBottom: '100px'}} controls>
+            <video style={{marginBottom: '100px', maxWidth: '95%'}} controls>
                 <source src="/videos/ivan-tricks.webm" type="video/webm"/>
                 Your browser does not support the video tag.
             </video>
@@ -112,15 +112,22 @@ const Biography = styled.div`
     padding: 44px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #0D1832;
     color: white;
+
+
 `
 
 const BiographyTitle = styled.div`
     font-family: 'Times New Roman', serif;
     font-weight: 700;
     font-size: 37px;
+
+    @media (max-width: 600px) {
+        font-size: 30px;
+	}
 `
 
 const TextDecor = styled.img`
@@ -133,6 +140,11 @@ const BiographyText = styled.p`
     text-align: center;
     margin: 16px 0;
     max-width: 450px;
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+        max-width: 350px;
+	}
 `
 
 const TalantsTitle = styled.img`
@@ -149,6 +161,7 @@ const Talants = styled.div`
     flex-direction: column;
     gap: 100px;
     margin-bottom: 100px;
+    max-width: 100%;
 `
 
 const Title = styled.h2`

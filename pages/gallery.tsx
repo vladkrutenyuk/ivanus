@@ -6,8 +6,8 @@ import GalleryItem from "../components/GalleryItem"
 const GalleryPage = ({ images }: { images: string[] }) => {
     return (
         <Container>
-            {images?.map(image => 
-                <GalleryItem key={image} imageUrl={image}/>)}
+            {images?.map((image, index) => 
+                <GalleryItem key={`image${index}`} imageUrl={image}/>)}
         </Container>
     )
 }
@@ -30,9 +30,9 @@ const Container = styled.div`
 `
 
 export const getStaticProps: GetStaticProps = () => {
-    let images = fs.readdirSync('public/gallery')
+    let images = fs.readdirSync('public/ivans')
 
-    images = images.map(image => `/gallery/${image}`)
+    images = images.map(image => `/ivans/${image}`)
 
     // images = shuffle(images)
 

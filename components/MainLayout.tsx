@@ -7,7 +7,6 @@ const MainLayout = ({ children, items }:
     return (
         <>
             <FlexColumnCenter>
-                <BackgroundCosmos src='/images/cosmos.jpg' alt='ваня юницкий космос' />
                 <SubHeader>ФАН-ВЕБСАЙТ</SubHeader>
                 <LinkA href='/'>
                     <Header>
@@ -31,16 +30,6 @@ const FlexColumnCenter = styled.div`
     margin-bottom: 80px;
 `
 
-const BackgroundCosmos = styled.img`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-`
-
 const SubHeader = styled.div`
     margin-top: 12px;
     color: white;
@@ -48,6 +37,7 @@ const SubHeader = styled.div`
     font-style: italic;
     font-weight: 700;
     font-size: 35px;
+    z-index: 1;
 
     @media (max-width: 1000px) {
         font-size: 23px;
@@ -61,6 +51,7 @@ const Header = styled.div`
     padding: 20px 32px;
     background-color: #414450;
     border: 6px ridge #535665;
+    z-index: 1;
 
     @media (max-width: 1000px) {
         padding: 10px 16px;

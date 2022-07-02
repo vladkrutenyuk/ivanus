@@ -73,6 +73,10 @@ const FlexRow = styled.div`
     background-color: #101010;
     color: #00c90085;
     margin-bottom: 60px;
+
+    @media (max-width: 600px) {
+		margin-top: 32px;
+	}
 `
 
 const Digits = styled.span`
@@ -82,4 +86,6 @@ const Digits = styled.span`
     color: #00c900;
     background-color: black;
     padding: 2px;
+
+
 `

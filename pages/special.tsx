@@ -19,7 +19,7 @@ const SpecialPage = () => {
     useEffect(() => {
         if (started) {
             audio && audio.play()
-            window.scrollTo(0, 400)
+            window.scrollTo(0, 220)
         }
 
     }, [started, audio])
@@ -58,12 +58,13 @@ const Black = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     background-color: black;
 `
 
 const WebpImg = styled.img`
     height: 95vh;
+    z-index: 1;
 
     @media (max-width: 500px) {
         height: 75vh;
